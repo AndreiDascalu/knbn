@@ -1,10 +1,12 @@
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
 const Layout = () => {
   return (
     <div className="w-screen h-screen relative">
-      <Navbar></Navbar>
+      <Navbar />
+      <Sidebar />
       <div className="md:pl-[250px] pl-[20px] w-full h-full overflow-y-auto">
         <Outlet />
       </div>
