@@ -1,4 +1,9 @@
-import { HomeOutline, LogOutOutline } from "react-ionicons";
+import {
+  AnalyticsOutline,
+  AppsOutline,
+  HomeOutline,
+  LogOutOutline,
+} from "react-ionicons";
 
 const Sidebar = () => {
   const navLinks = [
@@ -6,6 +11,16 @@ const Sidebar = () => {
       title: "Home",
       icon: <HomeOutline color={"#555"} width={"26px"} height={"26px"} />,
       active: false,
+    },
+    {
+      title: "Boards",
+      icon: <AppsOutline color={"#555"} width={"26px"} height={"26px"} />,
+      active: true,
+    },
+    {
+      title: "Analytics",
+      icon: <AnalyticsOutline color={"#555"} width={"26px"} height={"26px"} />,
+      active: true,
     },
   ];
 
@@ -32,7 +47,7 @@ const Sidebar = () => {
         })}
       </div>
       <div className="flex absolute bottom-0 items-center md:justify-start justify-center gap-2 md:w-[100%] w-[70%] rounded-lg hover:bg-orange-300 px-2 py-3 cursor-pointer bg-gray-200">
-        <LogOutOutline></LogOutOutline>
+        <LogOutOutline />
         <span className="font-medium text-[15px] md:block hidden">Log out</span>
       </div>
     </div>
