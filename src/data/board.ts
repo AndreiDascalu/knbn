@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import taskImage from "../assets/images/task.jpg";
+import taskImage from "../assets/images/task1.jpg";
 import taskImage2 from "../assets/images/task2.jpg";
 import taskImage3 from "../assets/images/task3.jpg";
 import { Columns } from "../types";
