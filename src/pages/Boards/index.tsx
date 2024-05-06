@@ -4,9 +4,26 @@ import { Columns } from "../../types";
 import { Board } from "../../data/board";
 import { useState } from "react";
 import { AddOutline } from "react-ionicons";
+import Task from "../../components/Task";
 
 const Boards = () => {
-  const [columns, setcolumns] = useState<Columns>(Board);
+  const [columns, setColumns] = useState<Columns>(Board);
+  const [modalOpen, setmodalOpen] = useState(false);
+  const [selectedColumn, setSelectedColumn] = useState("");
+
+  const openModal = (columnId: any) => {
+    setSelectedColumn(columnId);
+    setmodalOpen(true);
+  };
+
+  const closeModal = () => {
+    setmodalOpen(false);
+  };
+
+  const handleAddTask = (taskData: any) => {
+    const newBoard = { ...columns };
+    newBoard[selectedColumn].items.push(taskData);
+  };
 
   return (
     <>
@@ -30,7 +47,11 @@ const Boards = () => {
                         draggableId={task.id.toString()}
                         index={index}
                       >
-                        {(provided: any) => <>{task.title}</>}
+                        {(provided: any) => (
+                          <>
+                            <Task provided={provided} task={task} />
+                          </>
+                        )}
                       </Draggable>;
                     })}
                     {provided.placeholder}
