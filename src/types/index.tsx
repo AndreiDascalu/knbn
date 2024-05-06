@@ -15,5 +15,5 @@ type Column = {
 };
 
 export type Columns = {
-    [key:string]: Column;
-}
+  [key: string]: Column;
+};

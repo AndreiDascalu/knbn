@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TimeOutline } from "react-ionicons";
 import { TaskT } from "../../types";
 
@@ -29,8 +30,8 @@ const Task = ({ task, provided }: TaskProps) => {
         ))}
       </div>
       <div className="w-full flex items-start flex-col">
-        <span className="text-[15.5px] font-medium text-[#555]">title</span>
-        <span className="text-[13.5px] text-grey-500">description</span>
+        <span className="text-[15.5px] font-medium text-[#555]">{title}</span>
+        <span className="text-[13.5px] text-grey-500">{description}</span>
       </div>
       <div className="w-full border border-dashed"></div>
       <div className="w-full flex items-center justify-between">
